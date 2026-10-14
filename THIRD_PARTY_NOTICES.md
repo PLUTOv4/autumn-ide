@@ -17,7 +17,7 @@ The font file is the original release file, unchanged (internal name "Pretendard
 
 ### FFmpeg in Electron
 
-Electron loads FFmpeg from `ffmpeg.dll` (LGPL 2.1); its notice is part of `LICENSES.chromium.html`. Electron's standard copy can play H.264 and AAC, which are covered by patents. Autumn does not play audio or video, so `node scripts/build.js --free-ffmpeg` replaces that file with the copy Electron publishes without those codecs (`ffmpeg-v<version>-win32-x64.zip` from the Electron release). The build also uses that copy automatically when the zip is already in the Electron download cache.
+Electron loads FFmpeg from `ffmpeg.dll` (LGPL 2.1); its notice is part of `LICENSES.chromium.html`. Electron's standard copy can play H.264 and AAC, which are covered by patents. Autumn does not play audio or video, so `node scripts/build.js --free-ffmpeg` replaces that file with the copy Electron publishes without those codecs (`ffmpeg-v<version>-win32-x64.zip` from the Electron release). The build also uses that copy automatically when the zip is already in the Electron download cache. The released Autumn.exe is built this way.
 
 ## Used only for building
 

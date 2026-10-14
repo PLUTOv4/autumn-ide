@@ -14,6 +14,7 @@
 - Autumn is now licensed under the PolyForm Noncommercial License 1.0.0 instead of MIT.
 - Each Result node remembers which AI tool it uses.
 - *Copy request* is now a separate button, for an AI in a terminal that can really run the program.
+- The released build uses Electron's FFmpeg without the H.264 and AAC decoders. Autumn plays no audio or video.
 
 ## 1.1.1 (2026-10-14)
 
