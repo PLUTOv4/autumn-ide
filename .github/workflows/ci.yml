@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Syntax check
+        shell: bash
+        run: for f in src/*.js electron/*.js mcp/*.js scripts/*.js; do node --check "$f"; done
+
+      - name: MCP server end to end
+        run: npm test
+
+      - name: Korean translation
+        shell: bash
+        run: |
+          npm install --no-save --no-package-lock acorn@8
+          node scripts/i18n.js check ko

@@ -1,0 +1,17 @@
+node_modules/
+*.tmp-*
+*.log
+# build output, in case the repository is cloned straight into the Autumn folder
+/app/
+/WorkFlow/
+/Autumn.exe
+/Autumn.lnk
+# local secrets must never be committed
+.env
+.env.*
+# generated at build time from src/ + i18n/
+/src-ko/
+# rendered manual (node scripts/build.js manual)
+/docs/*.pdf
+# single-file build (node scripts/build.js portable)
+/dist/

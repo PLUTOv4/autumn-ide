@@ -1,0 +1,17 @@
+{
+  "name": "autumn",
+  "productName": "Autumn",
+  "version": "1.1.2",
+  "description": "A node-based IDE for Windows: design the program as nodes and let an AI coding tool write the code over MCP",
+  "main": "electron/main.js",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/build.js dev",
+    "build": "node scripts/build.js",
+    "mcp": "node mcp/server.js",
+    "test": "node scripts/test-mcp.js",
+    "manual": "node scripts/build.js manual"
+  },
+  "author": "PLUTOv4 (https://github.com/PLUTOv4)"
+}

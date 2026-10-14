@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3d2215"/>
+      <stop offset="1" stop-color="#140b07"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#ffc96e"/>
+      <stop offset="0.45" stop-color="#f07a36"/>
+      <stop offset="1" stop-color="#b5302a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.47" r="0.5">
+      <stop offset="0" stop-color="#ff8c42" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff8c42" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bg)"/>
+  <rect x="9.5" y="9.5" width="237" height="237" rx="54.5" fill="none" stroke="#ffa060" stroke-opacity="0.28" stroke-width="3"/>
+  <circle cx="128" cy="120" r="104" fill="url(#glow)"/>
+  <g transform="translate(128 126) scale(1.72) translate(-50 -50)">
+    <path fill="url(#leaf)" stroke="#ffd9a8" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round"
+      d="M50 4 58 20 67 15 64 38 78 26 82 34 96 31 90 46 97 50 74 66 78 75 55 71 54 96 46 96 45 71 22 75 26 66 3 50 10 46 4 31 18 34 22 26 36 38 33 15 42 20Z"/>
+    <g fill="none" stroke="#6b1d12" stroke-opacity="0.45" stroke-width="1.6" stroke-linecap="round">
+      <path d="M50 92V14"/>
+      <path d="M50 62 76 34M50 62 24 34"/>
+      <path d="M50 70 88 52M50 70 12 52"/>
+    </g>
+  </g>
+</svg>

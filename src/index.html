@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: autumnasset:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self' data: blob: autumnasset:">
+<title>Autumn</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="menubar">
+    <img class="mb-logo" src="icon.png" alt="">
+    <nav id="menus">
+      <button class="mb-item" data-menu="file">File</button>
+      <button class="mb-item" data-menu="edit">Edit</button>
+      <button class="mb-item" data-menu="view">View</button>
+      <button class="mb-item" data-menu="arrange">Arrange</button>
+      <button class="mb-item" data-menu="run">Run</button>
+      <button class="mb-item" data-menu="help">Help</button>
+    </nav>
+    <div id="docTitle"></div>
+    <div class="mb-right"><button class="mb-ai mb-lang" id="btnLang" data-cmd="toggleLang" title="Language / 언어" hidden></button><button class="mb-ai" id="btnAi" data-cmd="mcpInfo" title="Connect an AI (MCP)"><span class="dot" id="aiDot"></span>Connect AI</button></div>
+  </header>
+
+  <div id="toolbar"></div>
+
+  <div id="main">
+    <nav id="activity">
+      <button class="act" data-view="palette" data-tip="Nodes"></button>
+      <button class="act" data-view="outline" data-tip="Outline"></button>
+      <button class="act" data-view="tags" data-tip="Tags"></button>
+      <button class="act" data-view="boards" data-tip="Boards"></button>
+      <button class="act" data-view="objects" data-tip="Objects (data)"></button>
+      <div class="act-spacer"></div>
+      <button class="act" data-cmd="mcpInfo" data-tip="Connect an AI (MCP)"></button>
+      <button class="act" data-cmd="shortcuts" data-tip="Shortcuts (F1)"></button>
+    </nav>
+    <aside id="side">
+      <div class="panel-head" id="sideHead"></div>
+      <div class="side-body" id="sideBody"></div>
+    </aside>
+    <div class="resizer" data-resize="side"></div>
+    <section id="center">
+      <div id="tabs"></div>
+      <button id="inspReopen" data-cmd="toggleInsp" title="Open inspector (Ctrl+J)"></button>
+      <div id="viewport" tabindex="-1">
+        <div id="world">
+          <div id="groups"></div>
+          <svg id="links"><g id="linkg"></g><path id="tmplink" d=""/></svg>
+          <div id="nodes"></div>
+        </div>
+        <div id="selbox"></div>
+        <div id="emptyHint"><div><div class="eh-title">Empty board</div><div class="eh-sub">Double-click the canvas or drag a node in from the list on the left</div></div></div>
+        <canvas class="overlay" id="minimap"></canvas>
+        <div class="overlay bar" id="traceBar"></div>
+        <div class="overlay bar" id="runBar"></div>
+      </div>
+    </section>
+    <div class="resizer" data-resize="insp"></div>
+    <aside id="inspector"></aside>
+    <div id="welcome"></div>
+  </div>
+
+  <footer id="statusbar"></footer>
+</div>
+
+<div id="menu" class="popup"></div>
+<div id="search" class="popup"><div class="s-input"><span id="searchIcon"></span><input id="searchIn" spellcheck="false" autocomplete="off"></div><div id="searchList"></div><div class="s-foot" id="searchFoot"></div></div>
+<div id="viewer"></div>
+<div id="modal"></div>
+<div id="toast"></div>
+<input type="file" id="fileIn" accept=".json,application/json" hidden>
+<input type="file" id="imgIn" accept="image/*" multiple hidden>
+
+<script src="icons.js"></script>
+<script src="catalog.js"></script>
+<script src="fields.js"></script>
+<script src="spec.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
