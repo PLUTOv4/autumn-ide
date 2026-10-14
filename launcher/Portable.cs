@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 [assembly: AssemblyTitle("Autumn")]
 [assembly: AssemblyProduct("Autumn")]
-[assembly: AssemblyDescription("Autumn, a node-based planning tool")]
+[assembly: AssemblyDescription("Autumn IDE")]
 [assembly: AssemblyVersion("1.1.2.0")]
 [assembly: AssemblyFileVersion("1.1.2.0")]
 
